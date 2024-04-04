@@ -10,7 +10,7 @@ Resources:
       ImageId: ami-051f8a213df8bc089
       InstanceType: t2.micro
       SecurityGroups:
-        - !Ref SSHSecurityGroup
+        - !Ref SHSecurityGroup
         - !Ref ServerSecurityGroup
       KeyName: CF-Keys
       UserData:
@@ -33,8 +33,8 @@ Resources:
   ServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable accessing server via port 80
-      SecurityGroupIngress:
+     GroupDescription: Enable accessing server via port 80
+     SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
